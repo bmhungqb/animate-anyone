@@ -77,7 +77,7 @@ if __name__ == "__main__":
     random.shuffle(video_mp4_paths)
 
     # split into chunks,
-    batch_size = (len(video_mp4_paths) + num_workers - 1) // num_workers
+    batch_size = num_workers
     print(f"Num videos: {len(video_mp4_paths)} {batch_size = }")
     video_chunks = [
         video_mp4_paths[i : i + batch_size]
